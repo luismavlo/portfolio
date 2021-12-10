@@ -1,0 +1,699 @@
+/* FUENTES */
+
+@font-face{
+    font-family: "icons";
+    src: url("../fonts/websymbols-regular-webfont.svg#WebSymbolsRegular") format('svg'),
+         url("../fonts/websymbols-regular-webfont.eot");
+    src: url("../fonts/websymbols-regular-webfont.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/websymbols-regular-webfont.woff") format('woff'),
+         url("../fonts/websymbols-regular-webfont.ttf") format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
+
+
+/*ESTILOS GENERALES*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.blue{
+    color: RGB(0,166,235);
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 25% auto;
+}
+
+.docs{
+    width: 100%;
+    height: 100vh;
+}
+
+/*ESTILOS GENERAL DEL LATERAL*/
+
+.lateral{
+    position: relative;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 300px;
+    transition: all 300ms;
+    z-index: 10;
+}
+
+/*ESTILOS DE LA CABECERA*/
+
+.header{
+    background-color: RGB(4,11,20);
+    min-height: 32vh;
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header > .profile > img{
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    border-radius: 50%;
+
+    border: 6px solid RGB(44,47,63);
+}
+
+.header > .profile > p{
+    display: block;
+    margin-top: 10px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.50rem;
+    font-weight: 600;
+    color: white;
+}
+
+.header > .profile > .social{
+    margin-top: 10px;
+    display: flex;
+    min-width: 250px;
+    justify-content: space-around;
+}
+
+.header > .profile > .social > a{
+    color: white;
+    font-size: 25px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    background-color: RGB(33,36,49);
+    border-radius: 50%;
+    box-shadow: 0px 0px 1px RGB(33,36,49);
+    transition: all 300ms ease-in-out;
+}
+
+.header > .profile > .social > a:hover{
+    transform: scale(1.1);
+    color: RGB(0,166,235);
+}
+
+/*ESTILOS DE LA NAVBAR*/
+
+.navbar{
+    background-color: RGB(4,11,20);
+    min-height: 53vh;
+}
+
+.navbar > .ulMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around ;
+    min-height: 40vh;
+    align-items: flex-start;
+}
+
+.navbar > .ulMenu > li{
+    list-style: none;
+}
+
+.navbar > .ulMenu > li > a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.2rem;
+    margin-left: 25px;
+}
+
+
+.navbar > .ulMenu > li > a > span{
+    color: RGB(0,166,235);
+}
+
+/*ESTILOS SECCION PRINCIPAL*/
+
+.section{
+    grid-column: 1/3;
+}
+
+.two > h2,
+.three > h2,
+.four > h2,
+.five > h2{
+    margin-top: 20px ;
+    margin-bottom: 20px;
+    color: RGB(23,59,108);
+}
+
+.two > div > div > h3,
+.three > div > div > h3,
+.four > div > div > h3,
+.five > div > div > h3{
+    margin-top: 17px ;
+    margin-bottom: 20px;
+    color: RGB(23,59,108);
+}
+
+.two > *,
+.three > *,
+.four > *,
+.five > *{
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.one{
+    background-image: url(../img/myfoto.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.one::before{
+    content: '';
+    position: absolute;
+    background-color: rgba(0,0,0, 0.6);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+.presentation{
+    margin-left: 15px;
+}
+
+.one .presentation > *{
+    color: white;
+    font-weight: bold;
+}
+
+.one .presentation > h1{
+    color: RGB(0,166,235);
+    font-size: 1.4rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.one .presentation > h2{
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.two{
+    background-color: white;
+    color: RGB(39,40,41);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.two > .paragraphs > p{
+    text-align: start;
+}
+
+.two > .info > div > ul{
+    margin-top: 4px;
+    text-align: start;
+}
+
+.two > .info > div > ul > li{
+    list-style: none;
+    padding-bottom: 2px;
+}
+
+.two > .info > div > ul > li > div{
+    display: flex;
+    flex-direction: row;
+}
+
+.two > .info > div > ul > li > div > #sp1{
+    margin-right: 10px;
+}
+
+.two > .info > div > ul > li > div > #sp2{
+    margin-right: 13.5px;
+}
+
+.two > .info > div > ul > li > div > #sp3{
+    margin-right: 4.5px;
+}
+
+.two > .info > div > ul > li > div > #sp4{
+    margin-right: 8px;
+}
+
+.two > .info > div > ul > li > div > #sp5{
+    margin-right: 5px;
+}
+
+.two > .info > div > ul > li > div > #sp6{
+    margin-right: 8.5px;
+}
+
+
+
+.info > img{
+    width: 90%;
+}
+
+.three{
+    background-color: RGB(245,248,253);
+    color: RGB(39,40,41);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.education{
+    text-align: start;
+    border-left: 1px solid RGB(0,166,235);
+    border-bottom: 1px dashed RGB(0,166,235);
+    padding: 5px; 
+    padding-left: 40px;
+}
+
+.education > div{
+    margin-bottom: 10px;
+}
+
+.education .button{
+    margin-top: 15;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: 600;
+    color: white;
+    background-color: RGB(4,11,20);
+    text-decoration: none;
+    border: none;
+}
+
+.skills{
+    text-align: start;
+    align-items: center;
+    border-left: 1px solid RGB(0,166,235);
+    border-bottom: 1px dashed RGB(0,166,235);
+    padding: 5px; 
+}
+
+.skills > .skill{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 20px;
+    padding-left: 40px;
+}
+
+.skills > h3{
+    padding-left: 40px;
+}
+
+.skills > .skill > img{
+    width: 70px;
+    height: 70px;
+    transition: all 300ms;
+}
+
+
+ /*Tarjetas*/
+ .four{
+    background-color: white;
+    color: RGB(39,40,41);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.four > div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card{
+    width: 90%;
+    border: 2px solid black;
+    min-height: 40vh;
+    background-color: RGB(4,11,20);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: all 400ms ease-in-out;
+}
+
+.card:hover{
+    transform: scale(1.1, 1.1);
+}
+
+.card > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 32vh;
+    transition: all 500ms;
+}
+
+.card > div:hover{
+    color: RGB(4,11,20);
+    background-color: white;
+}
+
+.card > .button{
+    margin-top: 3%;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: 600;
+    color: white;
+    background-color: rgb(28, 171, 228);
+    text-decoration: none;
+    border: none;
+}
+
+.card > .button:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 2px rgb(28, 138, 228);
+}
+
+.card > .button:active{
+    cursor: pointer;
+    box-shadow: 0px 0px 1px rgb(25, 122, 201) inset;
+}
+
+.card > div > h4{
+    margin-top: 20px;
+}
+
+.card > div > p{
+    padding: 15px;
+}
+
+
+.five{
+    background-color: RGB(245,248,253);
+    color: RGB(39,40,41);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.five > div{
+    width: 90%;
+}
+
+.five > div > form > input[type=submit]{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px ;
+    border: 1px solid rgb(28, 171, 228);
+    background-color: RGB(0,166,235);
+    font-weight: bold;
+    color: white;
+}
+
+.five > div > form > input[type=submit]:hover{
+    box-shadow: 1px 0px 1px rgb(28, 171, 228);
+}
+
+.five > div > form > input[type=submit]:active{
+    box-shadow: 0px 0px 1px #ccc inset;
+}
+
+.five > div > form > .form-group{
+    padding-bottom: 10px;
+}
+
+.five > div > form > .form-group > *{
+    width: 95%;
+}
+
+
+
+.five > div > form > .form-group > input,
+.five > div > form > .form-group > textarea{
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: rgb(28, 171, 228);
+}
+
+
+.open{
+    position: fixed;
+    left: 85%;
+    padding-right: 5px;
+    padding-bottom: 4px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-family: icons;
+    font-size: 20px;
+    color: white;
+    background-color: RGB(20,157,221);
+    border: none;
+    border-radius: 50%;
+    margin-right: 15%;
+    margin-top: 10px;
+    z-index: 20;
+}
+
+.close{
+    position: fixed;
+    left: 85%;
+    padding-left: 1px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-family: icons;
+    font-size: 20px;
+    color: white;
+    background-color: RGB(20,157,221);
+    border: none;
+    border-radius: 50%;
+    margin-right: 15%;
+    margin-top: 10px;
+    z-index: 10;
+}
+
+.mapa{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/*ESTILOS DEL FOOTER*/
+
+.footer{
+    background-color: RGB(4,11,20);
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* MEDIA QUERYS */
+
+@media only screen and (min-width: 1200px) {
+    .grid-container{
+        display: grid;
+        grid-template-columns: 25% auto;
+    }
+
+    .lateral{
+        position: fixed;
+        display: flex;
+        grid-column: 1/2;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 25%;
+        z-index: 40;
+    }
+
+    .section{
+        grid-column: 2/3;
+        transition: all 300ms;
+    }
+
+    .navbar > .ulMenu > li > a{
+        display: block;
+        text-decoration: none;
+        color: rgb(161, 156, 156);
+        font-family: 'Mulish', sans-serif;
+        font-size: 1.2rem;
+        margin-left: 25px;
+    }
+    
+    .navbar > .ulMenu > li:hover > a{
+        color: white;
+    }
+
+    .navbar > .ulMenu > li > a > span{
+        color: rgb(161, 156, 156);
+    }
+    
+    .navbar > .ulMenu > li:hover > a > span{
+        color: RGB(0,166,235);
+    }
+
+    .one{
+        background-image: url(../img/miphoto.jpeg);
+    }
+
+    .one .presentation > h1{
+        color: RGB(0,166,235);
+        font-size: 2.5rem;
+        font-weight: bold;
+        position: relative;
+    }
+    
+    .one .presentation > h2{
+        color: white;
+        font-size: 1.8rem;
+        font-weight: bold;
+        position: relative;
+    }
+
+    .two > .info{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+
+    .two > .info > img{
+        width: 45%;
+    }
+
+    .three > div{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .three > div >.education,
+    .three > div >.skills{
+        width: 45%;
+        border-bottom: none;
+    }
+
+
+
+    .skills > .skill > img{
+        width: 80px;
+        height: 80px;
+        filter: grayscale(80%);
+        transition: all 300ms;
+    }
+    
+    .skills > .skill > img:hover{
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        filter: grayscale(0%);
+        box-shadow: 1px 2px 1px lightblue;
+    }
+    
+    /*Tarjetas*/
+    .four{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .four > div{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .card{
+        width: 30%;
+        border: 2px solid black;
+        min-height: 40vh;
+        background-color: RGB(4,11,20);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card > h4{
+        margin-top: 20px;
+    }
+
+    .ih{
+        display: none;
+    }
+
+    .open{
+        display: none;
+    }
+
+    .close{
+        display: none;
+    }
+
+}
+
+
+
+
+/* .ih{
+    position: fixed;
+    left: 85%;
+    background-color: RGB(20,157,221);
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    border-radius: 50%;
+    margin-left: 20px;
+    padding-left: 6px
+}*/
